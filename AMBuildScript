@@ -124,8 +124,7 @@ class SteamWorksConfig(object):
         self.steamworks_root = ResolveEnvPath('STEAMWORKS', 'opensteamworks')
 
     if not self.steamworks_root or not os.path.isdir(self.steamworks_root):
-      print(builder.options.steamworks_path, self.steamworks_root, os.path.isdir(self.steamworks_root))
-      raise Exception('Could not find a source copy of SteamWorks')
+      raise Exception(f'Could not find a source copy of SteamWorks {self.steamworks_root}')
     self.steamworks_root = Normalize(self.steamworks_root)
 
   def configure(self):
