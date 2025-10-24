@@ -38,9 +38,8 @@ jobs:
     - uses: actions/checkout@v2
       name: Clone SteamworksSDK
       with:
-        repository: 'irql-notlessorequal/SteamworksSDK'
+        repository: 'https://github.com/rlabrecque/SteamworksSDK'
         path: 'assets/SteamworksSDK'
-        token: ${{ secrets.STEAMWORKS_SDK_OAUTH }}
     - uses: actions/checkout@v2
       name: Clone hl2sdk-sdk2013
       with:
